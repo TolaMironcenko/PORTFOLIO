@@ -1,0 +1,37 @@
+.aboutme {
+	padding: 25px;
+}
+
+.mainh1 {
+	font-size: 50px;
+	text-align: center;
+}
+
+.mainp {
+	text-align: center;
+	font-size: 25px;
+}
+
+.my_photo {
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+	max-width: 445px;
+	max-height: 581px;
+}
+
+.info {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (max-width: 1100px) {
+	.my_photo {
+		margin: 15px auto;
+	}
+
+	.info {
+		display: block;
+	}
+}

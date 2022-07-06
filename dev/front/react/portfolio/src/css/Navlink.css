@@ -1,0 +1,25 @@
+.navlink {
+	margin: 25px;
+	color: white;
+	text-decoration: none;
+	transition: 0.3s;
+	font-size: 35px;
+}
+
+.navlink:hover {
+	color: gray;
+}
+
+@media screen and (max-width: 1001px) {
+	.navlink {
+		margin: 15px;
+		font-size: 25px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.navlink {
+		display: block;
+		text-align: center;
+	}
+}

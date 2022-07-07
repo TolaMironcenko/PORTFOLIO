@@ -16,6 +16,35 @@ const Aboutme = () => {
 				<div className='my_photo'>
 					<img src={require('../imgs/myPhoto.png')} alt='моя фотография'/>
 				</div>
+				<div className='skills'>
+					<div className='skillscolumn'>
+						<ul className='table'>
+							Языки:
+							<li className='tableli'>Python</li>
+							<li className='tableli'>HTML</li>
+							<li className='tableli'>css</li>
+							<li className='tableli'>scss</li>
+							<li className='tableli'>javaScript</li>
+						</ul>
+						<ul className='table'>
+							Фреймворки и препроцессоры:
+							<li className='tableli'>Reactjs</li>
+							<li className='tableli'>SAAS</li>
+							<li className='tableli'>Electronjs</li>
+							<li className='tableli'>Django</li>
+							<li className='tableli'>Flask</li>
+						</ul>
+					</div>
+					<div className='skillscolumn'>
+						<ul className='table'>
+							Devops и production технологии:
+							<li className='tableli'>Docker</li>
+							<li className='tableli'>Docker-compose</li>
+							<li className='tableli'>Nginx</li>
+							<li className='tableli'>Uvicorn</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	)

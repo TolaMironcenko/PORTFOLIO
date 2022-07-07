@@ -15,6 +15,7 @@ const App = () => {
           <Route path="/examples" element={<Examples/>}/>
           <Route path="/reviews" element={<Reviews/>}/>
         </Routes>
+        <Navbar/>
       </BrowserRouter>
     </div>
   );

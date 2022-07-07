@@ -5,6 +5,7 @@
 	background-color: rgb(220, 220, 220);
 	padding: 10px;
 	overflow: hidden;
+	margin: 10px;
 }
 
 .cardhead {
@@ -29,6 +30,17 @@
 .cardtext {
 	margin: 10px;
 	width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+	.cardname {
+		font-size: 20px;
+	}
+
+	.date {
+		top: 15px;
+		right: 15px;
+	}
 }
 
 @media screen and (max-width: 900px) {

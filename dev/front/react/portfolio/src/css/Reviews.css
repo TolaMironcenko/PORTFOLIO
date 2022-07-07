@@ -5,3 +5,42 @@
 .reviewsh1 {
 	font-size: 50px;
 }
+
+.allreviews {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.reviewshead {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.plusbtn {
+	padding: 10px;
+	color: white;
+	background-color: black;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	transition: 0.3s;
+	font-size: 25px;
+}
+
+.plusbtn:hover {
+	background-color: rgb(100, 100, 100);
+}
+
+@media screen and (max-width: 900px) {
+	.allreviews {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.reviewshead {
+		display: block;
+	}
+}

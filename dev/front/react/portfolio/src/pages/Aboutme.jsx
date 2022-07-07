@@ -43,6 +43,12 @@ const Aboutme = () => {
 							<li className='tableli'>Nginx</li>
 							<li className='tableli'>Uvicorn</li>
 						</ul>
+						<ul className='table'>
+							Системы контроля версий:
+							<li className='tableli'>git</li>
+							<li className='tableli'>gitea</li>
+							<li className='tableli'>github</li>
+						</ul>
 					</div>
 				</div>
 			</div>

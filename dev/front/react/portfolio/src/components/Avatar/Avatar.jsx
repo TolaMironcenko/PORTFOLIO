@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './Avatar.module.css'
+import './Avatar.css'
 
-const Avatar = ({ image }, { ...props }) => {
+const Avatar = ({ image, ...props }) => {
 	return (
-		<div className={styles.avatar}>
+		<div {...props} className='avatar'>
 			{
 				image
 					? <img src={image} alt='avatar' />

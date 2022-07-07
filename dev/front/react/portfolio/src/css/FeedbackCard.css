@@ -1,0 +1,51 @@
+.feedbackcard {
+	position: relative;
+	max-width: 520px;
+	max-height: 280px;
+	background-color: rgb(220, 220, 220);
+	padding: 10px;
+	overflow: hidden;
+}
+
+.cardhead {
+	width: 100%;
+	/* background-color: red; */
+	padding: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.cardname {
+	font-size: 25px;
+	margin: 10px;
+}
+
+.date {
+	position: absolute;
+	top: 24px;
+	right: 24px;
+}
+
+.cardtext {
+	margin: 10px;
+	width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+	.feedbackcard {
+		display: block;
+		margin: 15px auto;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.cardname {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.cardname {
+		font-size: 15px;
+	}
+}

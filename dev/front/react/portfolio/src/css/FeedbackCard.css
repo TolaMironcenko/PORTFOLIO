@@ -1,6 +1,6 @@
 .feedbackcard {
 	position: relative;
-	max-width: 520px;
+	width: 520px;
 	max-height: 280px;
 	background-color: rgb(220, 220, 220);
 	padding: 10px;
@@ -50,14 +50,20 @@
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
 	.cardname {
 		font-size: 20px;
+	}
+	.feedbackcard {
+		width: 300px;
 	}
 }
 
 @media screen and (max-width: 350px) {
 	.cardname {
 		font-size: 15px;
+	}
+	.feedbackcard {
+		width: 250px;
 	}
 }

@@ -18,7 +18,9 @@ const Reviews = () => {
       	.then(
         	(result) => {
           		console.log(result)
-          		setAllreviews(result)
+          		if (result!==[]){
+          			setAllreviews(result)
+          		}
           		console.log(allreviews)
         	},)
       	// eslint-disable-next-line
@@ -60,7 +62,6 @@ const Reviews = () => {
 				{
 					allreviews.map((review) => {
 						return(
-
 								review.is_active
 								?<FeedbackCard
 									name={review.name}
@@ -69,7 +70,6 @@ const Reviews = () => {
 									date={timeToTime(review.date)}
 								>{review.text}</FeedbackCard>
 								:<div key={review.id}></div>
-
 						)
 					})
 				}

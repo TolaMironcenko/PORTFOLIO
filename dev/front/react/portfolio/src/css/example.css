@@ -1,0 +1,9 @@
+.example {
+    padding: 25px;
+}
+
+.examplecards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

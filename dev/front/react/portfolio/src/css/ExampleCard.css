@@ -26,6 +26,18 @@
 
 .projectdescription {
     height: 100%;
+    margin: 5px;
+}
+
+.projectlink {
+    text-decoration: none;
+    position: absolute;
+    margin: 5px;
+    /* bottom: 5px; */
+}
+
+.projecttitle {
+    margin: 5px;
 }
 
 @media screen and (max-width: 350px) {

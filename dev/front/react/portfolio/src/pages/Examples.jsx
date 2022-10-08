@@ -1,21 +1,48 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ExampleCard from '../components/ExampleCard'
 import '../css/example.css'
+import routes from "../routes"
 
 const Examples = () => {
+
+	const [allExamples, setAllExamples] = useState([])
+
+	useEffect(() => {
+		fetch(routes.examples(), {
+			mode: 'cors'
+		}).then(res => res.json()) // обработка ответа сервера
+		.then(
+		  (result) => {
+				console.log(result)
+				if (result!==[]){
+					setAllExamples(result)
+				}
+				console.log(allExamples)
+		  },)
+		  // eslint-disable-next-line
+	}, [])
+
 	return(
 		<div className="example">
 			<div className="examplecards">
-				<ExampleCard image='http://127.0.0.1:8000/media/posters/20210822_161325.jpg' title='fdghdg' text='dfgdfgdfgdfgdfgdfgdfgdfg'/>
-				<ExampleCard image='http://127.0.0.1:8000/media/posters/20210822_161325.jpg' title='fdghdg' text='dfgdfg dfgdfgdfgdgddfgdfgdfgd'/>
-				<ExampleCard image='http://127.0.0.1:8000/media/posters/20210822_161325.jpg' title='fdghdg' text='dfgdfg gdfgdfgdfgdfgdfgd'/>
-				<ExampleCard image='http://127.0.0.1:8000/media/posters/20210822_161325.jpg' title='fdghdg' text='dfgdfg dfgdfgdfgdfgdfgdfgdfgd'/>
-				<ExampleCard image='http://127.0.0.1:8000/media/posters/20210822_161325.jpg' title='fdghdg' text='dfgdfgfgdfgdfgdfgdfgdfgdfgdfgd'/>
-				<ExampleCard image='http://127.0.0.1:8000/media/posters/20210822_161325.jpg' title='fdghdg' text='dfgdf dfgdfgdfgdfgdfgdfgdfgdfg'/>
-				<ExampleCard image='http://127.0.0.1:8000/media/posters/20210822_161325.jpg' title='fdghdg' text='dfgdfg dfgdfgdfgdfgdfgdfgdfg'/>
-				<ExampleCard image='http://127.0.0.1:8000/media/posters/20210822_161325.jpg' title='fdghdg' text='dfgdfg dfgdfgdfgdfgddfgdfgd'/>
-				<ExampleCard image='http://127.0.0.1:8000/media/posters/20210822_161325.jpg' title='fdghdg' text='dfgdfg dfgfgdfgdfgdfgdfgd'/>
-				<ExampleCard image='http://127.0.0.1:8000/media/posters/20210822_161325.jpg' title='fdghdg' text='dfgdfg dfgdfgdfgdfgdfgdfg'/>
+				{
+					allExamples === []
+					? <></>
+					// eslint-disable-next-line
+					: allExamples.map((example) => {
+						if (example.is_active === true) {
+							return(
+								<ExampleCard 
+									key={example.id} 
+									image={example.image} 
+									title={example.title} 
+									text={example.description}
+									link={example.weburl}
+								/>
+							)
+						}
+					})
+				}
 			</div>
 		</div>
 

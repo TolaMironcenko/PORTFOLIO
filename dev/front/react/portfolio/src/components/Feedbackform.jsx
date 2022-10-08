@@ -19,7 +19,7 @@ const Feedbackform = ({
 				className={activeFeedbackform?'feedbackform active':'feedbackform'}
 				onClick={(e) => e.stopPropagation()}
 			>
-				Имя Фамилия
+				<h2>Имя Фамилия</h2>
 				<input 
 					className='feedbackforminput'
 					type='text'
@@ -28,7 +28,7 @@ const Feedbackform = ({
 					id='feedbackforminput'
 					onChange={(e)=>{setNewReview({...newReview, name: e.target.value})}}
 				/>
-				Отзыв
+				<h2>Отзыв</h2>
 				<textarea 
 					placeholder='Ваш отзыв'
 					className='feedbackformtextarea'

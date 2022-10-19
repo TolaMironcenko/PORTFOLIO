@@ -63,6 +63,7 @@
 	cursor: pointer;
 	transition: 0.3s;
 	font-size: 25px;
+	color: black;
 }
 
 .feedbackformbutton:hover {

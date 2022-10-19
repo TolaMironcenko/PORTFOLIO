@@ -19,7 +19,7 @@ const Aboutme = () => {
 				<div className='skills'>
 					<div className='skillscolumn'>
 						<ul className='table'>
-							Языки:
+							<h5>Языки:</h5>
 							<li className='tableli'>Python</li>
 							<li className='tableli'>HTML</li>
 							<li className='tableli'>css</li>
@@ -27,7 +27,7 @@ const Aboutme = () => {
 							<li className='tableli'>javaScript</li>
 						</ul>
 						<ul className='table'>
-							Фреймворки и препроцессоры:
+							<h5>Фреймворки и препроцессоры:</h5>
 							<li className='tableli'>Reactjs</li>
 							<li className='tableli'>SAAS</li>
 							<li className='tableli'>Electronjs</li>
@@ -37,14 +37,14 @@ const Aboutme = () => {
 					</div>
 					<div className='skillscolumn'>
 						<ul className='table'>
-							Devops и production технологии:
+							<h5>Devops и production технологии:</h5>
 							<li className='tableli'>Docker</li>
 							<li className='tableli'>Docker-compose</li>
 							<li className='tableli'>Nginx</li>
 							<li className='tableli'>Uvicorn</li>
 						</ul>
 						<ul className='table'>
-							Системы контроля версий:
+							<h5>Системы контроля версий:</h5>
 							<li className='tableli'>git</li>
 							<li className='tableli'>gitea</li>
 							<li className='tableli'>github</li>

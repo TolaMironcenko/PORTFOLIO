@@ -60,7 +60,9 @@ const Reviews = () => {
 			</div>
 			<div className='allreviews'>
 				{
-					allreviews.map((review) => {
+					allreviews.length === 0
+					? <h1>Пока что нет отзывов</h1>
+					: allreviews.map((review) => {
 						return(
 								review.is_active
 								?<FeedbackCard

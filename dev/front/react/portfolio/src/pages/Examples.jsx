@@ -26,8 +26,8 @@ const Examples = () => {
 		<div className="example">
 			<div className="examplecards">
 				{
-					allExamples === []
-					? <div/>
+					allExamples.length === 0
+					? <h1>Пока что нет примеров.</h1>
 					// eslint-disable-next-line
 					: allExamples.map((example) => {
 						if (example.is_active === true) {

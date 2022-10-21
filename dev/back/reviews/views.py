@@ -9,7 +9,7 @@ import datetime
 
 
 class ReviewViewSet(viewsets.ModelViewSet):
-    queryset = Review.objects.all()
+    queryset = Review.objects.filter(is_active=True)
     serializer_class = ReviewSerializer
 
 

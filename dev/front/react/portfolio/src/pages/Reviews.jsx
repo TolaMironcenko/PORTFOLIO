@@ -63,7 +63,7 @@ const Reviews = () => {
 					allreviews.length === 0
 					? <h1>Пока что нет отзывов</h1>
 					: allreviews.map((review) => {
-						return(
+							return(
 								review.is_active
 								?<FeedbackCard
 									name={review.name}

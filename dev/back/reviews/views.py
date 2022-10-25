@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from rest_framework import viewsets
 from .models import Review
 from .serializers import ReviewSerializer
@@ -15,15 +14,15 @@ class ReviewViewSet(viewsets.ModelViewSet):
 
 @api_view(['POST'])
 def addreview(request):
-	if request.method == 'POST':
-		new_review = Review(
-			name=str(request.data['name']),
-			text=str(request.data['text']),
-			date=datetime.datetime.today().strftime('%Y-%m-%d'),
-		)
-		print(new_review.__dict__)
-		serializer = ReviewSerializer(new_review, data=new_review.__dict__)
-		if serializer.is_valid():
-			serializer.save()
-			return Response(serializer.data)
-		return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    if request.method == 'POST':
+        new_review = Review(
+            name=str(request.data['name']),
+            text=str(request.data['text']),
+            date=datetime.datetime.today().strftime('%Y-%m-%d'),
+        )
+        print(new_review.__dict__)
+        serializer = ReviewSerializer(new_review, data=new_review.__dict__)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

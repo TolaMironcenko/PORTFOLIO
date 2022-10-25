@@ -2,7 +2,7 @@ import React from 'react'
 import '../../css/FeedbackCard.css'
 import Avatar from '../Avatar/Avatar'
 
-const FeedbackCard = ({ avatar_image, name, children, date }) => {
+const FeedbackCard = ({ name, children, date }) => {
 	return(
 		<div className='feedbackcard'>
 			<div className='cardhead'>

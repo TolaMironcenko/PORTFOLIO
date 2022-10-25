@@ -6,8 +6,6 @@ const Feedbackform = ({
 	setActiveFeedbackform,
 	newReview,
 	setNewReview,
-	allreviews,
-	setAllreviews,
 	sentReview
 }) => {
 	return(
